@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../model/products';
 @Component({
   selector: 'app-list-product',
@@ -6,6 +6,7 @@ import { Product } from '../model/products';
   styleUrls: ['./list-product.component.css'],
 })
 export class ListProductComponent implements OnInit {
+  public price: number;
   public title: String;
   public list: Product[];
   constructor() {}
@@ -26,7 +27,7 @@ export class ListProductComponent implements OnInit {
       {
         id: 13,
         title: 'T-shirt 2',
-        price: 28,
+        price: 40,
         likes: 40,
         description: 'nice T-shirt',
         category: 'Women',
